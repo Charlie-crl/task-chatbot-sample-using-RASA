@@ -1,0 +1,32 @@
+version: '3.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- bot_challenge
+- flight_reserving
+- thankyou
+
+entities:
+  - city:
+      roles:
+        - from
+        - to
+  - date
+responses:
+  utter_greet:
+  - text: 您好！我有什么可以帮您？
+  utter_goodbye:
+  - text: 好的再见
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_ok:
+  - text: 好的没事
+  utter_ok_help:
+  - text: 好的，还有什么可以帮您
+actions:
+- action_book_ticket

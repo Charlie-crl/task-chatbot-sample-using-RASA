@@ -1,0 +1,56 @@
+version: "3.0"
+nlu:
+- intent: greet
+  examples: |
+    - 你好
+    - 您好
+    - 您好啊
+    - 你好啊
+    - 早上好
+    - 中午好
+    - 晚上好
+
+- intent: goodbye
+  examples: |
+    - 再见
+    - 没事了
+    - 没有了
+
+- intent: affirm
+  examples: |
+    - 对的
+    - 是的
+    - 没错
+    - 对
+    - 是
+- intent: deny
+  examples: |
+    - 不是的
+    - 不对
+    - 错
+
+
+- intent: bot_challenge
+  examples: |
+    - 你是机器人吗？
+    - 你是人吗？
+    - 我正在和机器人说话吗
+
+- intent: flight_reserving
+  examples: |
+    - 我想订一张[上午](date)从[北京]{"entity": "city", "role": "from"}到[上海]{"entity": "city","role":"to"}的机票。
+    - 订机票
+    - [下午](date)从[北京]{"entity": "city", "role": "from"}到[长沙]{"entity": "city","role":"to"}的机票还有吗？
+    - [中午](date)从[北京]{"entity": "city", "role": "from"}到[深圳]{"entity": "city","role":"to"}的机票还有吗？
+    - 那[上午](date)呢？
+    - 那[中午](date)呢？
+    - 订[上午](date)的机票
+    - 订[下午](date)的机票
+    - 订[晚上](date)的机票
+    - 去[上海]{"entity":"city","role":"to"}
+    - 从[北京]{"entity":"city","role":"from"}出发
+    - [深圳]{"entity":"city","role":"to"}的票有没有啊
+- intent: thankyou
+  examples: |
+    - 谢谢
+    - 太感谢了

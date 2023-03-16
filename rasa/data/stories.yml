@@ -1,0 +1,24 @@
+version: "3.0"
+
+stories:
+- story: book ticket
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: flight_reserving
+  - action: action_book_ticket
+  - intent: affirm
+  - action: utter_ok_help
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: book ticket two
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: flight_reserving
+  - action: action_book_ticket
+  - intent: deny
+  - action: utter_ok_help
+  - intent: goodbye
+  - action: utter_goodbye
